@@ -53,15 +53,16 @@
 <!-- FORMULAIRE -->
       <div class="modal">
         <div class="content">
-          <a href="index.html"><span class="close"></span></a>
+         <span class="close"></span>
           <div class="modal-body">
             <form
+              id="reserve"
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
             >
-              <div
+            <div><p id="validate-error-message"></p></div><br>
+            <div
                 class="formData">
                 <label for="first">Prénom</label><br>
                 <input
@@ -70,9 +71,9 @@
                   id="first"
                   name="first"
                   minlength="2"
-                  required
+                  
                 /><br>
-                <p class="message-error-prenom"></p>
+                <p id="first-message" class="message"></p>
               </div>
               <div
                 class="formData">
@@ -82,10 +83,10 @@
                   type="text"
                   id="last"
                   name="last"
-                  minlength="2"
-                  required
+                  
+                  
                 /><br>
-                <p class="message-error-nom"></p>
+                <p id="last-message" class="message"></p>
               </div>
               <div
                 class="formData">
@@ -97,7 +98,7 @@
                   name="email"
                   required
                 /><br>
-                <p class="message-error-email"></p>
+                <p id="email-message" class="message"></p>
               </div>
               <div
                 class="formData">
@@ -107,14 +108,15 @@
                   type="text"
                   id="birthdate"
                   name="birthdate"
-                  required
+                  
                 /><br>
-                <p class="message-error-date"></p>
+                <p id="birthdate-message" class="message"></p>
               </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required>
+                <input type="number" class="text-control" id="quantity" name="quantity">
+                <p id="quantity-message" class="message"></p>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -125,7 +127,6 @@
                   id="location1"
                   name="location"
                   value="New York"
-                  required
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
@@ -137,7 +138,6 @@
                   id="location2"
                   name="location"
                   value="San Francisco"
-                  required
                 />
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
@@ -149,7 +149,6 @@
                   id="location3"
                   name="location"
                   value="Seattle"
-                  required
                 />
                 <label class="checkbox-label" for="location3">
                   <span class="checkbox-icon"></span>
@@ -161,7 +160,6 @@
                   id="location4"
                   name="location"
                   value="Chicago"
-                  required
                 />
                 <label class="checkbox-label" for="location4">
                   <span class="checkbox-icon"></span>
@@ -173,7 +171,6 @@
                   id="location5"
                   name="location"
                   value="Boston"
-                  required
                 />
                 <label class="checkbox-label" for="location5">
                   <span class="checkbox-icon"></span>
@@ -185,13 +182,12 @@
                   id="location6"
                   name="location"
                   value="Portland"
-                  required
                 />
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
-                <p class="message-error-city"></p>
+                <p id="city-message" class="message"></p>
               </div>
 
               <div
@@ -200,18 +196,19 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  required
                 />
                 <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <br>
+                <p id="cgv-message" class="message"></p>
+                
                 <input class="checkbox-input" type="checkbox" id="checkbox2"/>
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Je souhaite être prévenu des prochains évènements.
                 </label>
+                <br>
                 <br>
               </div>
               <input
@@ -221,9 +218,19 @@
                 value="C'est parti"
               />
             </form>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="modal-thanks" style="display: none;">
+          <div class="content-thanks">
+            <div class="modal-body">
+              <div class="thanks" id="thanks">
+                <div id="thanks-message"><p>Merci pour votre inscription</p></div>
+                <a href="index.html" class="lien-retour"><button class="btn-close">Fermer</button></a>
+              </div>
+            </div>
+          
+        </div>
     </main>
     <footer>
       <p class="copyrights">
@@ -233,3 +240,4 @@
     <script src="modal.js"></script>
   </body>
 </html>
+

@@ -165,7 +165,8 @@ main {
   font-size: 16px;
 }
 
-.modal {
+.modal,
+.modal-thanks {
   display: none;
   position: fixed;
   z-index: 1;
@@ -189,6 +190,24 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
+}
+
+.content-thanks {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+  height: 800px;
+  display: flex;
+  align-items: center;
 }
 
 .modal-body {
@@ -216,17 +235,33 @@ input {
   font-size: 20px;
   height: 48px;
 }
-.message-error-prenom,
-.message-error-nom,
-.message-error-email,
-.message-error-date,
-.message-error-city {
+.message {
   /* content: attr(data-error); */
   font-size: 0.4em;
-  color: red;
+  color: #e54858;
 }
 
-.formData[data-error]::after {
+.valid-message {
+  border: 2px solid green;
+}
+
+.error-message {
+  border: 2px solid #e54858;
+}
+
+#validate-error-message {
+  font-size: 0.6em;
+  color: #e54858;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  transition: 0.3s;
+}
+
+#thanks-message {
+  margin-bottom: 15px;
+}
+/* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -243,8 +278,7 @@ input {
 }
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
-}
-
+} */
 /* input[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
@@ -324,6 +358,7 @@ input {
   cursor: pointer;
   transform: scale(0.7);
 }
+
 .close:before,
 .close:after {
   position: absolute;
@@ -340,7 +375,8 @@ input {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.btn-close {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -351,6 +387,11 @@ input {
   cursor: pointer;
   border: 0;
 }
+
+.lien-retour {
+  text-decoration: none;
+}
+
 /* custom select styles */
 .custom-select {
   position: relative;
