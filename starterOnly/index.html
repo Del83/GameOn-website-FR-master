@@ -16,8 +16,7 @@
       <div class="header-logo">
       <img alt="logo" src="Logo.png" width="auto" height="auto" />
     </div>
-    <div class="main-navbar">
-      
+    <div class="main-navbar">     
       <a href="#" class="active"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
       <a href="#"><span>Contact</span></a>
@@ -61,7 +60,7 @@
               action="index.html"
               method="get"
             >
-            <div><p id="validate-error-message"></p></div><br>
+            <div><p id="error-message-submit"></p></div><br>
             <div
                 class="formData">
                 <label for="first">Prénom</label><br>
@@ -70,10 +69,8 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
-                  
                 /><br>
-                <p id="first-message" class="message"></p>
+                <p id="first-message" class="field-message"></p>
               </div>
               <div
                 class="formData">
@@ -83,10 +80,8 @@
                   type="text"
                   id="last"
                   name="last"
-                  
-                  
                 /><br>
-                <p id="last-message" class="message"></p>
+                <p id="last-message" class="field-message"></p>
               </div>
               <div
                 class="formData">
@@ -98,7 +93,7 @@
                   name="email"
                   required
                 /><br>
-                <p id="email-message" class="message"></p>
+                <p id="email-message" class="field-message"></p>
               </div>
               <div
                 class="formData">
@@ -108,15 +103,14 @@
                   type="text"
                   id="birthdate"
                   name="birthdate"
-                  
                 /><br>
-                <p id="birthdate-message" class="message"></p>
+                <p id="birthdate-message" class="field-message"></p>
               </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity">
-                <p id="quantity-message" class="message"></p>
+                <p id="quantity-message" class="field-message"></p>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -187,9 +181,8 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
-                <p id="city-message" class="message"></p>
+                <p id="city-message" class="field-message"></p>
               </div>
-
               <div
                 class="formData">
                 <input
@@ -201,7 +194,7 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <p id="cgv-message" class="message"></p>
+                <p id="cgv-message" class="field-message"></p>
                 
                 <input class="checkbox-input" type="checkbox" id="checkbox2"/>
                 <label class="checkbox2-label" for="checkbox2">
@@ -229,7 +222,6 @@
                 <a href="index.html" class="lien-retour"><button class="btn-close">Fermer</button></a>
               </div>
             </div>
-          
         </div>
     </main>
     <footer>

@@ -235,7 +235,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
-.message {
+.field-message {
   /* content: attr(data-error); */
   font-size: 0.4em;
   color: #e54858;
@@ -249,7 +249,7 @@ input {
   border: 2px solid #e54858;
 }
 
-#validate-error-message {
+#error-message-submit {
   font-size: 0.6em;
   color: #e54858;
   text-align: center;
